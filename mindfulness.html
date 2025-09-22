@@ -10,7 +10,7 @@
 <body>
     <header class="site-header">
         <div class="container nav-wrap">
-            <a href="index.html" class="logo">GreenBite</a>
+            <a href="index.html" class="logo"><img src="./images/logo.jpg" alt="GreenBite Logo" class="logo-img">GreenBite</a>
             <nav class="nav">
                 <a href="index.html">Home</a>
                 <a href="recipes.html">Recipes</a>
@@ -56,7 +56,7 @@
                 <input type="number" id="session-mins" min="1" max="120" value="10">
             </label>
 
-            <div style="display:flex;gap:0.5rem;margin-top:0.5rem;align-items:center">
+            <div id="session_timer" >
                 <button id="start-session" class="btn">Start Session</button>
                 <button id="stop-session" class="btn ghost">Stop</button>
                 <div class="timer-display" id="session-display">00:00</div>
@@ -67,7 +67,7 @@
 
         <section class="card" style="margin-top:1rem" aria-label="Ambient sounds">
             <h2>Ambient Sounds</h2>
-            <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
+            <div >
                 <button class="btn sound-btn" data-src="sounds/ocean.mp3">Ocean</button>
                 <button class="btn sound-btn" data-src="sounds/rain.mp3">Rain</button>
                 <button class="btn ghost" id="stop-sound">Stop</button>
