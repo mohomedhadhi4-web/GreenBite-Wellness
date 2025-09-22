@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBite — Mindfulness</title>
+    <link rel="icon" type="./images.jpg" href="./images/logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a href="index.html" class="logo">GreenBite</a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="calculator.html">Calculator</a>
+                <a href="workout.html">Workout</a>
+                <a href="mindfulness.html">Mindfulness</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="hamburger" aria-label="Toggle menu">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Mindfulness & Breathing</h1>
+
+        <section class="card" aria-label="Guided breathing">
+            <h2>Guided Breathing</h2>
+            <div id="breath-circle">Breathe</div>
+
+            <div class="controls-row">
+                <label>Cycle length:
+                    <select id="breath-length">
+                        <option value="4">4s inhale / 4s exhale</option>
+                        <option value="5" selected>5s inhale / 5s exhale</option>
+                        <option value="6">6s inhale / 6s exhale</option>
+                    </select>
+                </label>
+                <button id="start-breath" class="btn">Start</button>
+                <button id="stop-breath" class="btn ghost">Stop</button>
+            </div>
+            <p class="muted-small">Follow the circle: it grows on inhale and shrinks on exhale.</p>
+        </section>
+
+        <section class="card" style="margin-top:1rem" aria-label="Session timer">
+            <h2>Session Timer</h2>
+            <label>Type:
+                <select id="session-type">
+                    <option value="med">Meditation</option>
+                    <option value="pom">Pomodoro (25/5)</option>
+                </select>
+            </label>
+            <label>Minutes:
+                <input type="number" id="session-mins" min="1" max="120" value="10">
+            </label>
+
+            <div style="display:flex;gap:0.5rem;margin-top:0.5rem;align-items:center">
+                <button id="start-session" class="btn">Start Session</button>
+                <button id="stop-session" class="btn ghost">Stop</button>
+                <div class="timer-display" id="session-display">00:00</div>
+            </div>
+
+            <p id="session-status" class="muted-small"></p>
+        </section>
+
+        <section class="card" style="margin-top:1rem" aria-label="Ambient sounds">
+            <h2>Ambient Sounds</h2>
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
+                <button class="btn sound-btn" data-src="sounds/ocean.mp3">Ocean</button>
+                <button class="btn sound-btn" data-src="sounds/rain.mp3">Rain</button>
+                <button class="btn ghost" id="stop-sound">Stop</button>
+            </div>
+            <p class="muted-small">(Sample ambient clips from Pixabay — replace with your preferred files if desired.)</p>
+        </section>
+
+        <section class="card" style="margin-top:1rem" aria-label="Progress">
+            <h2>Progress</h2>
+            <p>Completed sessions: <strong id="completed-count">0</strong></p>
+            <button id="clear-sessions" class="btn ghost">Clear History</button>
+        </section>
+    </main>
+    <footer id="footer" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>GreenBite</h3>
+        <p>Balanced meals • Daily movement • Mindful living</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>hello@greenbite.example</p>
+      </div>
+    </div>
+    <div class="container small muted">© <span id="year"></span> GreenBite — All rights reserved</div>
+  </footer>
+
+    <script src="./mindfulnessscript.js"></script>
+    <script src="./global.js"></script>
+    
+
+
+
+</body>
+</html>

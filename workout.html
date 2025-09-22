@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBite - Workout </title>
+    <link rel="icon" type="./images.jpg" href="./images/logo.jpg">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrap">
+        <a href="index.html" class="logo">GreenBite</a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="calculator.html">Calculator</a>
+            <a href="workout.html">Workout</a>
+            <a href="mindfulness.html">Mindfulness</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="hamburger" aria-label="Toggle menu">☰</button>
+        </div>
+    </header>
+    <main class="container workout-bg">
+        <h1>Workout Generator</h1>
+        
+
+        <section class="card">
+            <form id="workout-form" class="form-grid" onsubmit="return false;">
+                <label>
+                    Body part (choose one or more)
+                    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem">
+                        <label><input type="checkbox" name="body" value="full" checked> Full body</label>
+                        <label><input type="checkbox" name="body" value="upper"> Upper body</label>
+                        <label><input type="checkbox" name="body" value="lower"> Lower body</label>
+                        <label><input type="checkbox" name="body" value="core"> Core</label>
+                        <label><input type="checkbox" name="body" value="arms"> Arms</label>
+                        <label><input type="checkbox" name="body" value="legs"> Legs</label>
+                    </div>
+                </label>
+
+                <label>
+                    Equipment
+                    <select id="equipment">
+                        <option value="none">None</option>
+                        <option value="dumbbell">Dumbbells</option>
+                        <option value="band">Resistance band</option>
+                        <option value="kettlebell">Kettlebell</option>
+                    </select>
+                </label>
+
+                <label>
+                    Number of exercises
+                    <input type="number" id="count" min="1" max="12" value="6">
+                </label>
+
+                <label>
+                    Duration per exercise (seconds)
+                    <input type="number" id="ex-duration" min="10" max="300" value="45">
+                </label>
+
+                <div class="form-actions">
+                    <button class="btn" id="generate-btn">Generate Workout</button>
+                    <button class="btn ghost" id="shuffle-btn" type="button">Shuffle</button>
+                </div>
+            </form>
+
+            <p class="small-muted">Tip: pick equipment you have. The generator will prefer exercises that match your selection.</p>
+        </section>
+
+        <section id="workout-area" class="card" hidden>
+            <h2>Your Workout</h2>
+            <ol id="workout-list" aria-live="polite"></ol>
+
+            <div class="workout-meta">
+                <div id="countdown">00:00</div>
+                <div style="display:flex;gap:0.5rem">
+                    <button id="prev-ex" class="btn ghost">Prev</button>
+                    <button id="start-ex" class="btn">Start</button>
+                    <button id="next-ex" class="btn ghost">Next</button>
+                </div>
+            </div>
+
+            <p id="workout-msg" class="muted small-muted"></p>
+        </section>
+    </main>
+
+    <footer id="footer" class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>GreenBite</h3>
+                <p>Balanced meals • Daily movement • Mindful living</p>
+            </div>
+            <div>
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>hello@greenbite.example</p>
+            </div>
+        </div>
+        <div class="container small muted">© <span id="year"></span> GreenBite — All rights reserved</div>
+    </footer>
+
+
+
+
+    <script src="./workoutscripts.js"></script>
+    <script src="global.js"></script>
+
+
+</body>
+</html>

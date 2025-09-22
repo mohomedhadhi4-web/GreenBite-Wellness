@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBite - Contact</title>
+    <link rel="icon" type="./images.jpg" href="./images/logo.jpg">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a href="index.html" class="logo">GreenBite</a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="calculator.html">Calculator</a>
+                <a href="workout.html">Workout</a>
+                <a href="mindfulness.html">Mindfulness</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="hamburger" aria-label="Toggle menu">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Contact & Feedback</h1>
+
+        <section class="card">
+            <form id="feedback-form">
+                <label>Name
+                    <input type="text" id="fb-name" required placeholder="Your name">
+                </label>
+                <label>Email
+                    <input type="email" id="fb-email" required placeholder="you@example.com">
+                </label>
+                <label>Message
+                    <textarea id="fb-message" required rows="5" placeholder="How can we improve GreenBite?"></textarea>
+                </label>
+                <div style="margin-top:0.6rem">
+                    <button class="btn" type="submit">Send Feedback</button>
+                </div>
+            </form>
+        
+            <p id="fb-msg" class="muted small-muted"></p>
+            <div id="fb-confirm" style="display:none;margin-top:0.6rem" class="feedback-ok">Thanks — your feedback was saved locally.</div>
+        </section>
+
+        
+
+        <section class="card" style="margin-top:1rem">
+            <h2>GreenBite HQ</h2>
+            <div class="map-wrap">
+                <!-- OpenStreetMap embed (adjust bbox coordinates to your HQ) -->
+                <iframe width="100%" height="300" frameborder="0" style="border:0"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=79.838%2C6.875%2C79.880%2C6.902&layer=mapnik"></iframe>
+            </div>
+            <p class="muted small-muted">Map uses OpenStreetMap embed. Replace bbox in src to center on your office.</p>
+        </section>
+
+        <section class="card" style="margin-top:1rem">
+            <h2>FAQ</h2>
+            <button class="acc-toggle">How can I submit a recipe?</button>
+            <div class="acc-panel"><p>Use the contact form to send your recipe. We'll review and add it if it fits GreenBite's guidelines.</p></div>
+
+            <button class="acc-toggle">Is GreenBite free to use?</button>
+            <div class="acc-panel"><p>Yes — all content is free to access.</p></div>
+
+            <button class="acc-toggle">Can I suggest a new workout?</button>
+            <div class="acc-panel"><p>Yes — send details through the feedback form (including equipment and steps).</p></div>
+        </section>
+    </main>
+    <footer id="footer" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>GreenBite</h3>
+        <p>Balanced meals • Daily movement • Mindful living</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>hello@greenbite.example</p>
+      </div>
+    </div>
+    <div class="container small muted">© <span id="year"></span> GreenBite — All rights reserved</div>
+  </footer>
+
+    <script src="contactscript.js"></script>
+    <script src="global.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

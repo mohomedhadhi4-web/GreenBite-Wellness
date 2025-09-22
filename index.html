@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBite — Wellness & Healthy Living</title>
+    <link rel="icon" type="./images.jpg" href="./images/logo.jpg">
+    <link rel="stylesheet"  href="./styles.css" >
+</head>
+<body>
+    
+    <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">GreenBite</a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="workout.html">Workout</a>
+        <a href="mindfulness.html">Mindfulness</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Eat mindfully. Live fully.</h1>
+          <p id="slogan" class="slogan">Loading inspirational thought...</p>
+          <div class="hero-cta">
+            <a class="btn" href="recipes.html">Explore Recipes</a>
+            <a class="btn ghost" href="calculator.html">Calculate Calories</a>
+          </div>
+        </div>
+        <img src="images/index.jpg" alt="Healthy food display" class="hero-img">
+      </div>
+    </section>
+
+    <section class="features container">
+      <h2>Health Tip of the Day</h2>
+      <div id="daily-tip" class="card tip-card">Loading tip...</div>
+
+      <h2>Quick Picks</h2>
+      <div class="grid quick-picks">
+        <article class="card">
+          <h3>Mindfulness</h3>
+          <p>Start with 5 minutes of breath awareness each morning.</p>
+        </article>
+        <article class="card">
+          <h3>Hydration</h3>
+          <p>Aim for at least 8 glasses (about 2L) of water daily.</p>
+        </article>
+        <article class="card">
+          <h3>Movement</h3>
+          <p>Short walks after meals aid digestion and mood.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="subscribe container">
+      <h2>Subscribe to our newsletter</h2>
+      <form id="newsletter-form" class="form-inline">
+        <input type="email" id="newsletter-email" placeholder="Your email" required>
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+      <p id="newsletter-msg" class="muted"></p>
+    </section>
+  </main>
+
+  <footer id="footer" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>GreenBite</h3>
+        <p>Balanced meals • Daily movement • Mindful living</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>hello@greenbite.example</p>
+      </div>
+    </div>
+    <div class="container small muted">© <span id="year"></span> GreenBite — All rights reserved</div>
+  </footer>
+
+  <script src="./index.js"></script>
+  <script src="./global.js"></script>
+
+</body>
+</html>

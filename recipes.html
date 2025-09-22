@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBite — Healthy Recipes</title>
+    <link rel="icon" type="./images.jpg" href="./images/logo.jpg">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a href="index.html" class="logo">GreenBite</a>
+            <nav class="nav" id="nav2">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="calculator.html">Calculator</a>
+                <a href="workout.html">Workout</a>
+                <a href="mindfulness.html">Mindfulness</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button id="hamburger2" class="hamburger" aria-label="Toggle menu">☰</button>
+        </div>
+    </header>
+    <main class="container">
+        <section class="recipes-top">
+            <h1>Healthy Recipes</h1>
+            <div class="filters">
+                <input type="search" id="search" placeholder="Search by name...">
+                <select id="category-filter">
+                    <option value="all">All</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="snack">Snack</option>
+                </select>
+            </div>
+        </section>
+        <section id="recipes-grid" class="grid recipes-grid" aria-live="polite">
+        <!-- Cards inserted by JS -->
+        </section>
+    </main>
+
+    <!-- Recipe modal -->
+    <div id="recipe-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">✕</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <footer id="footer" class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>GreenBite</h3>
+                <p>Balanced meals • Daily movement • Mindful living</p>
+            </div>
+            <div>
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>hello@greenbite.example</p>
+            </div>
+        </div>
+        <div class="container small muted">© <span id="year"></span> GreenBite — All rights reserved</div>
+    </footer>
+
+    
+    <script src="recipes.js"></script>
+    <script src="global.js"></script>
+
+</body>
+</html>
